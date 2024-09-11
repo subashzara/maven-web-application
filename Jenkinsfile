@@ -1,5 +1,5 @@
 node{
-
+properties([pipelineTriggers([pollSCM('* * * * *')])])
 def mavenHome = tool name: "maven3.9.8"
 	stage('checkout'){
 	git branch: 'master', credentialsId: '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', url: 'https://github.com/subashzara/maven-web-application.git'
