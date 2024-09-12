@@ -14,7 +14,7 @@ stages{
 	steps{
 	sh "mvn clean package"
 	}
-	}
+	}/*
 	stage('sonarreport'){
 	steps{
 	sh "mvn sonar:sonar"
@@ -29,7 +29,7 @@ stages{
 	steps{
 	sshagent(['28584798-5e89-433e-a4fa-7521acc9aec2']) {
 	   	sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@54.221.34.118:/opt/apache-tomcat-9.0.93/webapps/"
-		}
+		}*/
 	}
 	}
 }//stage closing
